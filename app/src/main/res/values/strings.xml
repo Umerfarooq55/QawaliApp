@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MusicAPP</string>
+
+    <string-array name="spinner_array">
+        <item>Add to favorite</item>
+        <item>download</item>
+    </string-array>
+</resources>

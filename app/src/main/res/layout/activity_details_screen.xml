@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".DetailsScreen">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_favorite_border_black_24dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/musicimage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+
+        android:src="@drawable/ic_music_note_black_24dp" />
+
+    <TextView
+        android:id="@+id/musict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/musicimage"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        tools:text="Title of song will show" />
+
+    <RelativeLayout
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/musict"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/player_shape">
+
+        <ImageView
+            android:id="@+id/backword"
+            android:layout_width="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_fast_rewind_black_24dp" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/backword"
+            android:src="@drawable/ic_play_arrow_black_24dp" />
+
+        <ImageView
+            android:id="@+id/forword"
+            android:layout_marginTop="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/play"
+            android:src="@drawable/ic_fast_forward_black_24dp" />
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/repeat"
+            android:src="@drawable/ic_shuffle_black_24dp" />
+
+        <ImageView
+            android:id="@+id/repeat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_repeat_black_24dp" />
+
+        <ProgressBar
+            android:id="@+id/determinateBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:progress="25" />
+
+        <TextView
+            android:id="@+id/duration_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:text="00:00" />
+
+        <TextView
+            android:id="@+id/duration_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:text="00:00" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/player"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/download_button_shape"
+        android:text="download"
+        android:textColor="@color/colorAccent" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:background="#000000" />
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:background="@color/grey"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/postion"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/song"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/postion"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"/>
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/SpinnerTheme"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp" />
+</RelativeLayout>
