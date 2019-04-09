@@ -8,6 +8,7 @@
     tools:context=".DetailsScreen">
 
     <ImageView
+        android:id="@+id/fav"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
@@ -41,7 +42,7 @@
         android:layout_below="@+id/musict"
         android:layout_centerInParent="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/player_shape">
 
@@ -85,8 +86,18 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="5dp"
             android:src="@drawable/ic_repeat_black_24dp" />
-
         <ProgressBar
+            android:id="@+id/loading"
+            android:layout_toRightOf="@+id/forword"
+            android:layout_width="25dp"
+            android:visibility="gone"
+            android:indeterminate="true"
+            android:indeterminateTint="#FFC107"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="25dp"
+            />
+        <SeekBar
             android:id="@+id/determinateBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
@@ -95,7 +106,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
-            android:progress="25" />
+            android:progress="0" />
 
         <TextView
             android:id="@+id/duration_start"
@@ -124,11 +135,12 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/download"
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_below="@+id/player"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/download_button_shape"
         android:text="download"
         android:textColor="@color/colorAccent" />

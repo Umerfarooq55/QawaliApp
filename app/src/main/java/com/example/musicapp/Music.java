@@ -1,6 +1,10 @@
 package com.example.musicapp;
 
-public class Music {
+
+import java.io.Serializable;
+
+@SuppressWarnings("serial") //With this annotation we are going to hide compiler warnings
+public class Music implements Serializable {
                String singer;
     String title;
     String track;

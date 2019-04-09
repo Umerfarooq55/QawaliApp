@@ -5,4 +5,6 @@
         <item>Add to favorite</item>
         <item>download</item>
     </string-array>
+    <string name="title_activity_play_fav_song">PlayFavSong</string>
+    <string name="title_activity_play_favritesongs">PlayFavritesongs</string>
 </resources>

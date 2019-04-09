@@ -8,12 +8,15 @@ import android.os.Bundle;
 public class Splashscreen extends AppCompatActivity {
 
     private int SPLASH_TIME_OUT = 3000;
+    TinyDB mtindb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
-
+        mtindb=new TinyDB(this);
+        mtindb.putString("Details","no");
+        mtindb.putString("playfav","no");
         new Handler().postDelayed(new Runnable() {
 
             /*
